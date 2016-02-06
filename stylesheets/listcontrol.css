@@ -1,37 +1,81 @@
-.listBox {
+.container {
+  display: flex;
+}
+
+.container-column {
   display: flex;
   flex-direction: column;
+}
+
+@keyframes example {
+    from {
+      height: 2em;
+    }
+    to {
+      height: 22em;
+    }
 }
 
 .listBoxItem {
-  display: flex;
-  flex-direction: column;
   order: 1;
-  text-align: center;
-  background-color: #fff5cc;
+  align-items: stretch;
+  justify-content: center;
+  background-color: red;
   height: 2em;
-  margin: .2em;
+  border-width: 1px;
+  border-color: black;
+  padding: .2em;
+  /*margin: .2em;*/
+  border-style: solid;
   box-shadow: 0 8px 6px -6px black;
   overflow: hidden;
-  transition: height 1s;
-}
-
-.listBoxItemExpanded {
-  height: 20em;
+  animation-name: example;
+  animation-duration: .5s;
+  transition: height 2s;
 }
 
 .listBoxItemHeader {
   order: 1;
-  flex-shrink: 0;
-  background-color: #4C58A6;
-  height: 2em;
+  background-color: #77857F;
+  /*border-width: 1px;*/
+  /*border: solid;*/
+  /*margin: .2em;*/
+  padding: .2em;
+  height: 1.2em;
   box-shadow: 0 8px 6px -6px grey;
+}
+
+.listBoxItemHeader::selection {
+  background-color: inherit;
+  color: white;
 }
 
 .listBoxItemContent {
   order: 1;
-  height: 100%;
-  padding: .5em;
+  height: 0;
+  transition: height 2s;
+  visibility: hidden;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: black;
+  background-color: white;
+  /*padding: .5em;*/
+}
+
+/*.exListBoxItemContent {
+  display: block;
   overflow-y: scroll;
   overflow-x: hidden;
+  height: 20em;
+  padding: .5em;
+}*/
+
+.animatedListBoxItemContent {
+  visibility: visible;
+  display: block;
+  /*overflow-y: scroll;*/
+  overflow-x: hidden;
+  /*height: 20em;*/
+  padding: .5em;
+  /*animation-duration: 2s;*/
 }
