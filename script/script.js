@@ -1,18 +1,14 @@
 $(function() {
-    $('#main').click(function (event) {
+    $('article.listBox').click(function (event) {
       var eventTarget = $(event.target);
       if (eventTarget.hasClass('listBoxItemHeader')) {
           if (!eventTarget.parent().hasClass('listBoxItemExpanded')) {
-              $('section.container-column.listBoxItemExpanded').removeClass('listBoxItemExpanded');
-              $('section.container-column.listBoxItemExpanded').next().removeClass('exListBoxItemContent');
-              eventTarget.parent().addClass('listBoxItemExpanded');
-              eventTarget.next().addClass('exListBoxItemContent');
-              // console.log(eventTarget.next());
+              $('section.listBoxItemExpanded').removeClass('listBoxItemExpanded');
+              $('section.listBoxItemExpanded').next().removeClass('exListBoxItemContent');
           }
-          else {
-            eventTarget.parent().toggleClass('listBoxItemExpanded');
-            eventTarget.next().toggleClass('exListBoxItemContent');
-          }
+
+          eventTarget.parent().toggleClass('listBoxItemExpanded');
+          eventTarget.next().toggleClass('exListBoxItemContent');
       }
      })
 

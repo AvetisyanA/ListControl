@@ -1,23 +1,32 @@
 * {
   box-sizing: content-box;
 }
-
-/*body, main {
-  height: 100vh;
+/*
+body, main, article, section {
+  margin: 0;
+  padding: 0;
 }*/
 
 body, main, h1, p, article, section {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1D2240;
 }
 
 body {
-  /*text-align: center;*/
-  background-color: #aa781b;
+  background-color: #71A9BD;
+}
+
+article::selection, header::selection, section::selection, p::selection {
+  background-color: inherit;
+  color: lightblue;
 }
 
 article {
-  background-color: #aa7899;
+  background-color: #78B5C9;
 }
 
 main>article {
