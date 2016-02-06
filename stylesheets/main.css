@@ -13,5 +13,16 @@ body, main, h1 {
 
 main {
   text-align: center;
-  background-color: #63aa12;
+  background-color: #59B099;
+}
+
+article {
+  background-color: #C2C5C3;
+}
+
+main>article {
+  position: absolute;
+  margin-top: 100px;
+  left: 10%;
+  right: 10%;
 }

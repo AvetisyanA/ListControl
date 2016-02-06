@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.listBoxItem {
+  order: 1;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-color: black;
+  margin: 3px;
+  padding: 0px;
+  border-style: solid;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.listBoxItemHeader {
+  order: 1;
+  background-color: #77857F;
+  border-width: 1px;
+  margin: 0;
+  padding: .2em;
+}
+
+.listBoxItemHeader::selection {
+  background-color: inherit;
+  color: white;
+}
+
+
+
+/*.listBoxHeader, .listBoxContent {
+  order: 1;
+  align-items: center;
+  justify-content: center;
+  border-width: 3px;
+  border-color: black;
+  margin: 3px;
+  padding: 3px;
+}*/
