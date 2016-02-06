@@ -2,22 +2,22 @@
   box-sizing: content-box;
 }
 
-body, main {
+/*body, main {
   height: 100vh;
-}
+}*/
 
-body, main, h1 {
+body, main, h1, p, article, section {
   margin: 0;
   padding: 0;
 }
 
-main {
+body {
   /*text-align: center;*/
-  background-color: #59B099;
+  background-color: #aa781b;
 }
 
 article {
-  background-color: #C2C5C3;
+  background-color: #aa7899;
 }
 
 main>article {
