@@ -1,43 +1,37 @@
-.container {
+.listBox {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
-
 .listBoxItem {
+  display: flex;
+  flex-direction: column;
   order: 1;
-  align-items: center;
-  justify-content: center;
-  border-width: 1px;
-  border-color: black;
-  margin: 3px;
-  padding: 0px;
-  border-style: solid;
+  text-align: center;
+  background-color: #fff5cc;
+  height: 2em;
+  margin: .2em;
   box-shadow: 0 8px 6px -6px black;
+  overflow: hidden;
+  transition: height 1s;
+}
+
+.listBoxItemExpanded {
+  height: 20em;
 }
 
 .listBoxItemHeader {
   order: 1;
-  background-color: #77857F;
-  border-width: 1px;
-  margin: 0;
-  padding: .2em;
+  flex-shrink: 0;
+  background-color: #4C58A6;
+  height: 2em;
+  box-shadow: 0 8px 6px -6px grey;
 }
 
-.listBoxItemHeader::selection {
-  background-color: inherit;
-  color: white;
-}
-
-
-
-/*.listBoxHeader, .listBoxContent {
+.listBoxItemContent {
   order: 1;
-  align-items: center;
-  justify-content: center;
-  border-width: 3px;
-  border-color: black;
-  margin: 3px;
-  padding: 3px;
-}*/
+  height: 100%;
+  padding: .5em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
